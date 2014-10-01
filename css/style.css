@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(220,230,230);
+}
+
+h1{
+    margin: auto;
+    width: 500px;
+}
+h1, h2, h3 {
+    font-family: 'Droid Sans Mono';
+}
+
+.intro {
+    font-family: 'Libre Baskerville', serif;
+}
+
