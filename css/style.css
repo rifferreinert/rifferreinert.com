@@ -4,6 +4,7 @@ body{
 
 h1{
     margin: auto;
+    text-align: center;
     width: 500px;
 }
 h1, h2, h3 {
