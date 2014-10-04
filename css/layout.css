@@ -17,3 +17,11 @@ header {
 p.first{
     margin-top: 80px;
 }
+
+p {
+    width: 90%;
+    min-width: 200px;
+    max-width: 900px;
+    margin: 10px;
+    padding: 5px;
+}
