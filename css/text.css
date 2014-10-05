@@ -1,4 +1,4 @@
-//Fonts
+/*Fonts*/
 body {
     font-family: 'Libre Baskerville', serif;
 }
@@ -11,7 +11,7 @@ header>h1 {
     font-size: 1.5em;
 }
 
-//navigation
+/*navigation*/
 header a.nav-link {
     text-decoration: none;
 }

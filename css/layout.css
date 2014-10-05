@@ -2,8 +2,8 @@ body{
     width: 100%;
 }
 
-//Header
-header h1 {
+/*Header*/
+header h1{
     margin: 0px;
 }
 
@@ -25,7 +25,7 @@ header {
 }
 
 
-//main body
+/*main body*/
 p.first{
     margin-top: 80px;
 }
