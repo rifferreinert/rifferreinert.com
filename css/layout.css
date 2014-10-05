@@ -2,8 +2,9 @@ body{
     width: 100%;
 }
 
-header>h1 {
-    margin: 0em 0em 0.2em 0em;
+//Header
+header h1 {
+    margin: 0px;
 }
 
 header li {
@@ -11,9 +12,9 @@ header li {
 }
 
 header ul {
-    margin: 0px;
-
+    margin: 0px auto;
 }
+
 header {
     position: fixed;
     top: 0px;
@@ -23,6 +24,8 @@ header {
     text-align: center;
 }
 
+
+//main body
 p.first{
     margin-top: 80px;
 }
