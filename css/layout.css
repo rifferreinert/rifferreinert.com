@@ -14,13 +14,15 @@ header li {
 
 header ul {
     margin: 0px auto;
-    padding: 0px
+    padding: 0px;
 }
 
 header {
     position: fixed;
     top: 0px;
     left: 0px;
+    max-height: 65px;
+    min-width: 300px;
     width: 100%;
     padding: .2em 0em .2em 0em;
     text-align: center;
@@ -28,14 +30,19 @@ header {
 
 
 /*main body*/
-p.first{
-    margin-top: 80px;
+div.main {
+    width: 66%;
+    margin: 70px auto;
+    color: #404040;
+    text-align: justify;
 }
 
 p {
     width: 90%;
+    margin: 0px;
     min-width: 200px;
     max-width: 900px;
-    margin: 10px;
     padding: 5px;
+    line-height: 1.6em;
+    text-align: center;
 }
