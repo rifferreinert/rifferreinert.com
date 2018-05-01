@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { Col, Row, Container, Button } from 'reactstrap';
+
 import TimerRemaining from './TimeRemaining';
 import TaskNotes from './TaskNotes';
 import { pause, start, nextPeriod } from '../actions/periods';
@@ -28,28 +30,71 @@ const Pomodoro = (props) => {
   }
 
   return (
-    <div>
-      <h1>{props.taskTitle}</h1>
-      <TimerRemaining />
-      <button onClick={onTimerToggle}>
-        {props.timerRunning ? 'Pause' : 'Resume'}
-      </button>
-      <br />
-      <button
-        onClick={onFinishTaskClick}
+    <Container
+    >
+      <Row>
+        <Col xs="1"
+        >
+        </Col>
+        <Col xs="10">
+          <h1>{props.taskTitle}</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="1"
+        >
+        </Col>
+        <Col xs="10">
+          <TimerRemaining />
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="1"
+        >   
+        </Col>
+        <Col xs="10">
+          <Button
+            color="secondary"
+            onClick={onTimerToggle}>
+            {props.timerRunning ? 'Pause' : 'Resume'}
+          </Button>
+        </Col>
+      </Row>
+      <Row
+        className="mt-2"      
       >
-        Finish Task
-      </button>
-      <button
-        onClick={onNextPeriod}
+        <Col xs="1"
+        >  
+        </Col>
+        <Col xs="10">
+          <Button
+            onClick={onFinishTaskClick}
+            color="secondary"
+          >
+            Finish Task
+          </Button>
+          <Button
+            className="ml-2"
+            onClick={onNextPeriod}
+            color="primary"
+          >
+            Start Break
+          </Button>
+        </Col>
+      </Row>
+      <Row
+        className="mt-2"            
       >
-        Start Break
-      </button>
-      <br />
-      <TaskNotes
-        readOnly={false}
-      />
-    </div>
+        <Col xs="1"
+        > 
+        </Col>
+        <Col xs="10">
+          <TaskNotes
+            readOnly={false}
+          />
+        </Col>
+      </Row>
+    </Container >
   );
 };
 

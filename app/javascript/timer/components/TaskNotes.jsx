@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { Input } from 'reactstrap';
+
 import { getCurrentTask } from '../selectors/tasks';
 import { editTask } from '../actions/tasks';
 
@@ -12,7 +14,8 @@ const TextNotes = (props) => {
 
   return (
     <div>
-      <textarea
+      <Input
+        type="textarea"
         cols="80"
         rows="8"
         readOnly={props.readOnly}
