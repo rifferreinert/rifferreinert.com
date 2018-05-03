@@ -36,7 +36,7 @@ store.dispatch(addTask({
 // store.dispatch(nextPeriod(store.getState().time));
 
 const jsx = (
-<Provider store={store}>
+  <Provider store={store}>
     <AppRouter />
   </Provider>
 );

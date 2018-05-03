@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-import { Container, Col, Row } from 'reactstrap';
+import { Container, Col, Row, Button } from 'reactstrap';
 
 import { nextPeriod } from '../actions/periods';
 
@@ -24,12 +25,27 @@ const StartTimer = (props) => {
         <Col xs="2"
           className="d-flex justify-content-center"
         >
-          <button onClick={onStartClick}
+          <Link to="/timer/tasks">
+            <Button
+              size="lg"
+              color="secondary"
+            >
+              Edit Tasks
+            </Button>
+          </Link>
+        </Col>
+      </Row>
+      <Row className="mt-5">
+        <Col xs="5"></Col>
+        <Col xs="2"
+          className="d-flex justify-content-center"
+        >
+          <Button onClick={onStartClick}
             size="lg"
-            className="btn btn-lg btn-primary"
+            color="primary"
           >
             Start Timer
-          </button>
+          </Button>
         </Col>
       </Row>
     </Container >

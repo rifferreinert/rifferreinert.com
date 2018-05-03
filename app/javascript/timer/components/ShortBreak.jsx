@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import { Row, Col, Container, Button } from 'reactstrap';
+
 import TimeRemaining from './TimeRemaining';
 import { pause, start, nextPeriod } from '../actions/periods';
 import { getCurrentTask } from '../selectors/tasks';
@@ -21,27 +23,61 @@ const ShortBreak = (props) => {
   };
 
   return (
-    <div>
-      <h1>{props.periodType == 'short_break' ? 'Short Break' : 'Long Break'}</h1>
-      <TimeRemaining />
-      <p>
-        Next Focus: {props.taskTitle}
-      </p>
-      <button onClick={onTimerToggle}>
-        {props.timerRunning ? 'Pause' : 'Resume'}
-      </button>
-      <Link to="/timer/tasks">
-        <button>
-          Edit Task List
-        </button>
-      </Link>
-      <button onClick={onEndBreakClick}>
-        End Break
-      </button>
-      Notes:
-      <TaskNotes />
+    <Container>
+      <Row>
+        <Col xs="1"></Col>
+        <Col xs="10">
+          <h1>{props.periodType == 'short_break' ? 'Short Break' : 'Long Break'}</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="1"></Col>
+        <Col xs="10">
+          <TimeRemaining />
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="1"></Col>
+        <Col xs="10">
+          <p>
+            Next Focus: {props.taskTitle}
+          </p>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="1"></Col>
+        <Col xs="10">
+          <Button
+            color="secondary"
+            onClick={onTimerToggle}
+          >
+            {props.timerRunning ? 'Pause' : 'Resume'}
+          </Button>
+          <Link to="/timer/tasks">
+            <Button
+              className="ml-2"
+              color="secondary"
+            >
+              Edit Task List
+            </Button>
+          </Link>
+          <Button
+            className="ml-2"
+            color="primary"
+            onClick={onEndBreakClick}>
+            End Break
+          </Button>
+        </Col>
+      </Row>
+      <Row className="mt-3">
+        <Col xs="1"></Col>
+        <Col xs="10">
+          Notes:
+          <TaskNotes />
+        </Col>
+      </Row>
 
-    </div>
+    </Container>
   );
 };
 

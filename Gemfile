@@ -67,3 +67,5 @@ end
 
 # Added at 2018-04-25 22:07:54 -0500 by ben:
 gem "rubocop", "~> 0.55.0", :group => [:development]
+# Added at 2018-05-01 20:16:04 -0500 by ben:
+gem "dotenv", "~> 2.4", :groups => [:test, :development]

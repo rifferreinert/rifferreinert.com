@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { Container, ListGroup, Row, Col } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faPlusSquare, faCheckSquare } from '@fortawesome/fontawesome-free-regular';
+import { faPlusSquare, faPlayCircle } from '@fortawesome/fontawesome-free-regular';
 
 import TaskItem from './TaskItem';
 import { deleteTask } from '../actions/tasks';
@@ -19,6 +19,7 @@ const TaskList = props => (
         <div key={task.get('id')}>
           <TaskItem
             id={task.get('id')}
+            complete={task.get('complete')}
             topic={task.get('title')}
             details={task.get('details')}
           />
@@ -38,7 +39,7 @@ const TaskList = props => (
         <Link to="/timer"
           style={{ color: "black" }}
         >
-          <FontAwesomeIcon icon={faCheckSquare} />
+          <FontAwesomeIcon icon={faPlayCircle} />
 
         </Link>
       </Col>

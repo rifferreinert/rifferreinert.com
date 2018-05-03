@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { ListGroupItem, Col, Row } from 'reactstrap';
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faEdit, faTrashAlt, faSquare, faCheckSquare } from '@fortawesome/fontawesome-free-regular';
 
-import { faEdit, faTrashAlt } from '@fortawesome/fontawesome-free-regular';
 import { deleteTask } from '../actions/tasks';
 
 
@@ -22,12 +22,19 @@ const TaskItem = (props) => {
         <ListGroupItem
           className="justify-content-between d-flex align-items-center"
         >
-          {props.topic} - {shortDetails}
+          <span>
+            <span>
+              <FontAwesomeIcon icon={props.complete ? faCheckSquare : faSquare} className="mr-3" />
+            </span>
+            {props.topic} - {shortDetails}
+          </span>
           <span>
             <Link to={`/timer/tasks/${props.id}/edit`}
               style={{ color: 'black' }}
             >
-              <FontAwesomeIcon icon={faEdit} />
+              <span className="ml-2">
+                <FontAwesomeIcon icon={faEdit} />
+              </span>
             </Link>
             <span className="ml-2">
               <FontAwesomeIcon icon={faTrashAlt}
