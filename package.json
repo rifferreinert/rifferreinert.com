@@ -4,8 +4,8 @@
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
     "@fortawesome/fontawesome-free-regular": "^5.0.10",
-    "@fortawesome/react-fontawesome": "^0.0.18",
-    "@rails/webpacker": "3.4",
+    "@fortawesome/react-fontawesome": "^0.0.19",
+    "@rails/webpacker": "3.5.3",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^4.1.0",
     "immutable": "^3.8.2",
@@ -15,7 +15,7 @@
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "reactstrap": "^5.0.0",
+    "reactstrap": "^6.0.1",
     "redux": "^4.0.0",
     "uuid": "^3.2.1"
   },

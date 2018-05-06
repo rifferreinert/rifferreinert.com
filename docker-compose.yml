@@ -1,0 +1,16 @@
+version: '3'
+volumes:  
+  postgres_data: {} 
+services:  
+  app:    
+    build:      
+      context: .      
+      dockerfile: ./docker/app/Dockerfile     
+  web:    
+    build:      
+      context: .      
+      dockerfile: ./docker/web/Dockerfile    
+    depends_on:      
+      - app    
+    ports:      
+      - 80:80
