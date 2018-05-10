@@ -69,3 +69,9 @@ end
 gem "rubocop", "~> 0.55.0", :group => [:development]
 # Added at 2018-05-01 20:16:04 -0500 by ben:
 gem "dotenv", "~> 2.4", :groups => [:test, :development]
+
+# Added at 2018-05-08 21:53:55 -0500 by ben:
+gem "bootstrap", "~> 4.1"
+
+# Added at 2018-05-09 21:20:45 -0500 by ben:
+gem "jquery-rails", "~> 4.3"
