@@ -18,25 +18,6 @@ setInterval(() => {
   store.dispatch(updateTime());
 }, 100);
 
-
-store.dispatch(addTask({
-  title: 'first task',
-  details: 'here are the details',
-  notes: 'some first notes',
-}));
-store.dispatch(addTask({
-  title: 'second task',
-  details: 'second task details',
-  notes: 'some second notes',
-}));
-store.dispatch(addTask({
-  title: 'third task',
-  details: 'third task details',
-  notes: 'some third notes',
-}));
-
-// store.dispatch(nextPeriod(store.getState().time));
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
