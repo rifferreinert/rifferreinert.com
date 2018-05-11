@@ -75,3 +75,6 @@ gem "bootstrap", "~> 4.1"
 
 # Added at 2018-05-09 21:20:45 -0500 by ben:
 gem "jquery-rails", "~> 4.3"
+
+# Added at 2018-05-09 22:30:19 -0500 by ben:
+gem "font-awesome-sass", "~> 5.0"

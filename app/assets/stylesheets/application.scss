@@ -13,7 +13,20 @@
  */
 
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 
 body {
     padding-top: 65px;
+    font-family: 'Crimson Text', serif !important;
+}
+
+.social-links {
+    color: white;
+    font-size: 1.1rem;
+    a:link, a:hover, a:visited {
+        color: white;
+        text-decoration: none;
+    }
 }

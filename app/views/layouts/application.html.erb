@@ -18,19 +18,32 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Projects
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/timer">Timer</a>
-          </div>
-      </li>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Projects
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/timer">Timer</a>
+            </div>
+          </li>
         </ul>
+        <span class="social-links">
+          <a href="mailto:ben@rifferreinert.com">
+            <%= icon('far', 'envelope', id: 'mail-icon', class: 'mr-3') %>
+          </a>
+          <a href="https://github.com/rifferreinert">
+            <%= icon('fab', 'github', id: 'github-icon', class: 'mr-3') %>
+          </a>
+          <a href="https://www.linkedin.com/in/benjamin-riffer-reinert-24995177/">
+            <%= icon('fab', 'linkedin', id: 'mail-icon', class: 'mr-3') %>
+          </a>
+        </span>
       </div>
     </nav>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
