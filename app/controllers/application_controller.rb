@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
-  def test
+  force_ssl if: :ssl_configured?
 
-    2
+  def ssl_configured?
+    !Rails.env.production?
   end
 end
