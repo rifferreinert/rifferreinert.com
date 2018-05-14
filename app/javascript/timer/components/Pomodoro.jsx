@@ -8,6 +8,7 @@ import TaskNotes from './TaskNotes';
 import { pause, start, nextPeriod } from '../actions/periods';
 import { finishTask } from '../actions/tasks';
 import { getCurrentTask, unfinishedTasks } from '../selectors/tasks';
+import Help from '../components/Help';
 
 const Pomodoro = (props) => {
   const onTimerToggle = () => {
@@ -30,8 +31,7 @@ const Pomodoro = (props) => {
   }
 
   return (
-    <Container
-    >
+    <Container>
       <Row>
         <Col xs="1"
         >
@@ -50,7 +50,7 @@ const Pomodoro = (props) => {
       </Row>
       <Row>
         <Col xs="1"
-        >   
+        >
         </Col>
         <Col xs="10">
           <Button
@@ -61,32 +61,35 @@ const Pomodoro = (props) => {
         </Col>
       </Row>
       <Row
-        className="mt-2"      
+        className="mt-2"
       >
         <Col xs="1"
-        >  
+        >
         </Col>
-        <Col xs="10">
-          <Button
-            onClick={onFinishTaskClick}
-            color="secondary"
-          >
-            Finish Task
-          </Button>
-          <Button
-            className="ml-2"
-            onClick={onNextPeriod}
-            color="primary"
-          >
-            Start Break
-          </Button>
+        <Col xs="10" className="d-flex justify-content-between">
+          <span>
+            <Button
+              onClick={onFinishTaskClick}
+              color="secondary"
+            >
+              Finish Task
+            </Button>
+            <Button
+              className="ml-2"
+              onClick={onNextPeriod}
+              color="primary"
+            >
+              Start Break
+            </Button>
+          </span>
+          <Help />
         </Col>
       </Row>
       <Row
-        className="mt-2"            
+        className="mt-2"
       >
         <Col xs="1"
-        > 
+        >
         </Col>
         <Col xs="10">
           <TaskNotes

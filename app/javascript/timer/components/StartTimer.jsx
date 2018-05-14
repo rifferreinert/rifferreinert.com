@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Container, Col, Row, Button } from 'reactstrap';
 
 import { nextPeriod } from '../actions/periods';
+import Help from '../components/Help';
 
 const StartTimer = (props) => {
   const onStartClick = () => {
@@ -46,6 +47,16 @@ const StartTimer = (props) => {
           >
             Start Timer
           </Button>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="5"></Col>
+        <Col xs="2"
+          className="d-flex justify-content-center"
+        >
+          <div class="mt-5">
+            <Help />
+          </div>
         </Col>
       </Row>
     </Container >

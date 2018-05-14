@@ -9,6 +9,7 @@ import { pause, start, nextPeriod } from '../actions/periods';
 import { getCurrentTask } from '../selectors/tasks';
 import { taskType } from '../selectors/periods';
 import TaskNotes from './TaskNotes';
+import Help from '../components/Help';
 
 const ShortBreak = (props) => {
   const onTimerToggle = () => {
@@ -46,27 +47,30 @@ const ShortBreak = (props) => {
       </Row>
       <Row>
         <Col xs="1"></Col>
-        <Col xs="10">
-          <Button
-            color="secondary"
-            onClick={onTimerToggle}
-          >
-            {props.timerRunning ? 'Pause' : 'Resume'}
-          </Button>
-          <Link to="/timer/tasks">
+        <Col xs="10" className="d-flex justify-content-between">
+          <span>
+            <Button
+              color="secondary"
+              onClick={onTimerToggle}
+            >
+              {props.timerRunning ? 'Pause' : 'Resume'}
+            </Button>
+            <Link to="/timer/tasks">
+              <Button
+                className="ml-2"
+                color="secondary"
+              >
+                Edit Task List
+              </Button>
+            </Link>
             <Button
               className="ml-2"
-              color="secondary"
-            >
-              Edit Task List
+              color="primary"
+              onClick={onEndBreakClick}>
+              End Break
             </Button>
-          </Link>
-          <Button
-            className="ml-2"
-            color="primary"
-            onClick={onEndBreakClick}>
-            End Break
-          </Button>
+          </span>
+          <Help />
         </Col>
       </Row>
       <Row className="mt-3">

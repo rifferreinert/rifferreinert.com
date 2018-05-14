@@ -8,14 +8,22 @@ import { faPlusSquare, faPlayCircle } from '@fortawesome/fontawesome-free-regula
 
 import TaskItem from './TaskItem';
 import { deleteTask } from '../actions/tasks';
+import Help from '../components/Help';
 
 const TaskList = props => (
   <Container>
-    <h2>
-      Task List
-    </h2>
+    <Row>
+      <Col xs="1" md="3"></Col>
+      <Col xs="10" md="6"
+        className="justify-content-center d-flex"
+      >
+        <h2>Task List</h2>
+      </Col>
+    </Row>
+
     <ListGroup>
       {props.tasks.map(task => (
+
         <div key={task.get('id')}>
           <TaskItem
             id={task.get('id')}
@@ -24,10 +32,13 @@ const TaskList = props => (
             details={task.get('details')}
           />
         </div>
+
       )).toJS()}
     </ListGroup>
+
     <Row className="mt-2">
-      <Col xs="6"
+      <Col xs="1" md="3"></Col>
+      <Col xs="10" md="6"
         className="justify-content-between d-flex"
         style={{ "fontSize": "1.5rem" }}
       >
@@ -36,6 +47,7 @@ const TaskList = props => (
         >
           <FontAwesomeIcon icon={faPlusSquare} />
         </Link>
+        <Help />
         <Link to="/timer"
           style={{ color: "black" }}
         >

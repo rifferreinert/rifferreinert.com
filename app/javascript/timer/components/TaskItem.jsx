@@ -18,7 +18,8 @@ const TaskItem = (props) => {
 
   return (
     <Row className="mt-2">
-      <Col xs="6">
+      <Col xs="1" md="3"></Col>
+      <Col xs="10" md="6">
         <ListGroupItem
           className="justify-content-between d-flex align-items-center"
         >
