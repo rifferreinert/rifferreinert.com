@@ -11,10 +11,10 @@
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Ben Riffer-Reinert</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <a class="navbar-brand" href="#">Ben Riffer-Reinert</a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <%= 'active' if controller_name == 'home' %>">
@@ -31,17 +31,21 @@
             </div>
           </li>
         </ul>
-        <span class="social-links">
-          <a href="mailto:ben@rifferreinert.com">
-            <%= icon('far', 'envelope', id: 'mail-icon', class: 'mr-3') %>
-          </a>
-          <a href="https://github.com/rifferreinert">
-            <%= icon('fab', 'github', id: 'github-icon', class: 'mr-3') %>
-          </a>
-          <a href="https://www.linkedin.com/in/benjamin-riffer-reinert-24995177/">
-            <%= icon('fab', 'linkedin', id: 'mail-icon', class: 'mr-3') %>
-          </a>
-        </span>
+        <ul class="navbar-nav social-links">
+          <li class="nav-item">
+            <a href="mailto:ben@rifferreinert.com">
+              <%= icon('far', 'envelope', id: 'mail-icon', class: 'mr-3') %>
+            </a>
+          </li>
+            <a href="https://github.com/rifferreinert">
+              <%= icon('fab', 'github', id: 'github-icon', class: 'mr-3') %>
+            </a>
+          <li>
+            <a href="https://www.linkedin.com/in/benjamin-riffer-reinert-24995177/">
+              <%= icon('fab', 'linkedin', id: 'mail-icon', class: 'mr-3') %>
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="container">
