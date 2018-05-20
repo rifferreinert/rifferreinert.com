@@ -12,3 +12,7 @@ export const nextPeriod = time => ({
   type: 'NEXT_PERIOD',
   time,
 });
+
+export const alerted = () => ({
+  type: 'ALERTED',
+});

@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { Howl } from 'howler';
+
 import { secondsRemaining } from '../selectors/periods';
 
 const TimeRemaining = (props) => {

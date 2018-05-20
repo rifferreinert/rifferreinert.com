@@ -15,5 +15,12 @@ export const secondsRemaining = (period, time) => {
   return seconds > 0 ? seconds : 0;
 };
 
+export const shouldAlert = (period, time) => {
+  if (secondsRemaining(period, time) == 0 && !period.get('hasAlerted')) {
+    return true;
+  }
+  return false;
+};
+
 export const taskType = period => period ? period.get('type') : 'no_period';
 

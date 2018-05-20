@@ -6,6 +6,7 @@ const newPeriod = (type, recentStart) => {
   return Map({
     cumTime: 0,
     recentStart,
+    hasAlerted: false,
     timerRunning: true,
     type,
   });
@@ -57,8 +58,10 @@ export default (state = periodsReducerDefaultState, action) => {
           .set(
             'cumTime',
             state.last().get('cumTime') + action.time.diff(state.last().get('recentStart')),
-          ).set('timerRunning', false),
+        ).set('timerRunning', false),
       );
+    case 'ALERTED':
+      return state.set(-1, state.last().set('hasAlerted', true));
     default:
       return state;
   }
