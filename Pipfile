@@ -5,11 +5,12 @@ verify_ssl = true
 
 [dev-packages]
 docker = "*"
-"flake8" = "*"
 "autopep8" = "*"
+pylint = "*"
 
 [packages]
 docker = "*"
+click = "*"
 
 [requires]
 python_version = "3.6"
