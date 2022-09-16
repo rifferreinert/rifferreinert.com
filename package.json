@@ -8,7 +8,7 @@
     "@fortawesome/react-fontawesome": "^0.0.19",
     "@rails/webpacker": "3.5.3",
     "babel-preset-react": "^6.24.1",
-    "bootstrap": "^4.1.0",
+    "bootstrap": "^4.3.1",
     "howler": "^2.0.12",
     "immutable": "^3.8.2",
     "moment": "^2.22.1",
